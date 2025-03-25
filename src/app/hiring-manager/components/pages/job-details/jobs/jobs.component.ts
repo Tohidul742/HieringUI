@@ -44,7 +44,7 @@ export class JobsComponent {
         this.JobDetails.forEach((el: any) => {
           el['Title'] = JSON.parse(el['jd'])?.['Job Title'];
         });
-
+        this.JobDetails = this.JobDetails.sort((a: any, b: any) => b.id - a.id);
         //this.JobDetails = this.JobDetails.reverse();
         //console.log(this.JobDetails);
         localStorage.setItem(
