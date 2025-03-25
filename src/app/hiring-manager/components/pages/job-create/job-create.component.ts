@@ -278,6 +278,8 @@ export class JobCreateComponent {
           }
         },
         (error) => {
+          this.jdloader = false;
+          this.router.navigate(['/job-details']);
           console.log(`something is error${error}`);
         },
         () => {
